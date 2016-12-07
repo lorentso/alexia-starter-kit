@@ -10,6 +10,6 @@
  */
 module.exports = app => app.intent('HelloIntent', 'hello', () => {
   return {
-    text: 'Hello'
+    text: 'Hello mate!'
   };
 });
