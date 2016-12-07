@@ -4,9 +4,9 @@ const storyTeller = require('./storyTeller');
 
 module.exports = app => {
 
-    const storyTypes = ['funny', 'sad', 'dummy'];
+    const storyTypes = ['funny', 'sad', 'dumb'];
     
-    app.customSlot('StoryType', ['funny', 'sad', 'dummy']);
+    app.customSlot('StoryType', storyTypes);
 
     const utterances = [
         'I want to hear a story.'
