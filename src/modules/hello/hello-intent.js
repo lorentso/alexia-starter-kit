@@ -8,8 +8,17 @@
  *      - 'Alexa, start <my-app-name>'
  *      - 'hello'
  */
-module.exports = app => app.intent('HelloIntent', 'hello', () => {
-  return {
-    text: 'Hello mate!'
-  };
-});
+module.exports = app => {
+
+  app.action({
+    from: '*',
+    to: 'HelloIntent'
+  });
+
+  app.intent('HelloIntent', 'hello', () => {
+    return {
+      text: 'Hello mate!',
+      end: false
+    };
+  });
+};
